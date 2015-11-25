@@ -1,13 +1,10 @@
-//define module appsoa.components.dashboard {
-
 import {Component, View, AfterContentInit} from 'angular2/angular2';
-//import {CollectionComponent} from 'APPSOA/Components/Collection/CollectionComponent.ts';
 
 @Component({
 
     selector:   'n',
-    //inputs: ['type']
     properties: ['type: type']
+    
 })
 
 @View({
@@ -22,9 +19,7 @@ export class FormPersonComponent implements AfterContentInit {
     constructor() {
 
         console.log('FormPersonComponent.constructor()');
-        //console.log(elementRef.nativeElement);
-        //console.log(dynamicComponentLoader);
-        //console.log(elementRef.getAttribute('type'));
+    
     }
 
     render() {
@@ -51,5 +46,3 @@ export class FormPersonComponent implements AfterContentInit {
     }
 
 }
-
-//}
