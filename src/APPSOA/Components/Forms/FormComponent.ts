@@ -1,15 +1,11 @@
-//define module appsoa.components.dashboard {
-
 import {Inject, Component, View, AfterContentInit, NgFor} from 'angular2/angular2';
-//import {FormSegmentComponent} from "./Segment/FormSegmentComponent.ts";
-//import {CollectionComponent} from 'APPSOA/sComponents/Collection/CollectionComponent.ts';
-//import {FormSegmentsComponent} from 'APPSOA/Components/Form/Segment/FormSegmentsComponent.ts';
 import {FormSegmentComponent} from 'APPSOA/Components/Form/Segment/FormSegmentComponent.ts';
 
 @Component({
 
     selector: 'form',
     inputs: ['config: config']
+    
 })
 
 @View({
@@ -38,11 +34,9 @@ import {FormSegmentComponent} from 'APPSOA/Components/Form/Segment/FormSegmentCo
 
 export class FormComponent implements AfterContentInit {
 
-    //public config:Object;
-
     constructor() {
 
-        //console.log('FormComponent.constructor(): ' + this.config);
+        console.log('FormComponent.constructor()');
 
     }
 
@@ -76,5 +70,3 @@ export class FormComponent implements AfterContentInit {
     }
 
 }
-
-//}
