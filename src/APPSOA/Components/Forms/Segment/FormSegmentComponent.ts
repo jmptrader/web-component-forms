@@ -1,6 +1,3 @@
-//define module appsoa.components.dashboard {
-
-//import {Component, View} from 'angular2/angular2';
 import {EventEmmiter,AfterViewChecked, ChildComponent,IHttpPromise, ViewChild, provide, Inject, Attribute, ViewEncapsulation, DynamicComponentLoader, ElementRef, Component, View, AfterContentInit} from 'angular2/angular2';
 import {CollectionComponent} from 'APPSOA/Components/Collection/CollectionComponent.ts';
 import {FormLocationComponent} from 'APPSOA/Components/Form/Location/FormLocationComponent.ts';
@@ -11,7 +8,6 @@ import ElementRef = ng.ElementRef;
 @Component({
 
     selector: 'form-segment',
-    //inputs: ['type']
     properties: ['type: type'],
     inputs: ['config: config'],
 
@@ -22,9 +18,8 @@ import ElementRef = ng.ElementRef;
     template: `
         <div #component-outlet></div>
 
-    `,
-    //encapsulation: ViewEncapsulation.None,
-
+    `
+    
 })
 
 export class FormSegmentComponent implements AfterViewChecked {
@@ -40,27 +35,18 @@ export class FormSegmentComponent implements AfterViewChecked {
 
         this.loader = dynamicComponentLoader;
         this.elementRef = elementRef;
-//console.log(configServiceFactory().getConfig());
-//console.log(new FormConfigService());
-//console.log(FormConfigService.getConfig());
+        
         console.log('FormSegmentComponent.constructor()');
-        //console.log(dynamicComponentLoader);
-        //console.log(elementRef);
-        //console.log(elementRef.renderView;
-
+        
         var config = configServiceFactory().getConfig();
-
-        //console.log(elementRef.getAttribute('type'));
+        // add some sugar...
+        
     }
 
     afterViewChecked() {
 
         console.log('FormSegmentComponent.afterViewChecked()');
-        //console.log(this);
-        //console.log(this.dynamicComponentLoader);
-        //console.log(this.elementRef);
-        //console.log(elementRef.renderView;
-
+        
         var component:Component;
 
         if(this.type === 'Person') {
@@ -112,5 +98,3 @@ export class FormSegmentComponent implements AfterViewChecked {
     }
 
 }
-
-//}
